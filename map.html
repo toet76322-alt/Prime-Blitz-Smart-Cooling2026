@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Information | Prime Blitz</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.png">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+<nav class="main-nav">
+    <div class="nav-left">
+        <a href="index.html">
+            <img src="image/logo.png" alt="PRIME-BLITZ Logo" class="site-logo">
+        </a>
+        <span class="brand-name">PRIME-BLITZ</span>
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <span></span>
+    </label>
+
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active-link">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="resources.html" class="home-btn">Resources</a></li>
+            <li><a href="community.html">Community</a></li>
+        </ul>
+
+        <div class="nav-right-items">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>
+            <a href="signup.html"><div class="user-icon"><i class="fas fa-user-plus"></i></div></a>
+        </div>
+    </div>
+</nav>
+
+<main class="main-content">
+    <div class="hero-container">
+        <section class="hero-section">
+            
+            <div class="left-side">
+                <div class="top-badge">
+                    <i class="bi bi-geo-alt-fill"></i> Zone 1: Upper Myanmar
+                </div>
+                
+                <h1 class="main-heading">Mandalay Interactive Heat &amp; Cooling Map</h1>
+                
+                <p class="hero-description">
+                    An overview of urban heat islands across the Mandalay division. Use the data panels below to monitor dangerous thermal zones and track localized public cooling stations during severe dry-zone heat alerts.
+                </p>
+
+                <div class="info-data-grid">
+                    <div class="data-box-item hot-zone">
+                        <div class="data-title"><i class="bi bi-thermometer-high"></i> Mandalay Critical Zones</div>
+                        <p class="data-desc">Chanayethazan, Maha Aung Myae, and Pyigyidagun townships are currently reporting peak dry thermal density levels.</p>
+                    </div>
+                    
+                    <div class="data-box-item cool-zone">
+                        <div class="data-title"><i class="bi bi-snow"></i> Mandalay Cooling Hubs</div>
+                        <p class="data-desc">Shaded religious monastery compounds, ancient brick structures, and indoor public facilities are designated safe retreats.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="image-box hover-container-box">
+                    <img src="image/mandalay.png" alt="Mandalay Climate Grid" class="map-preview-img">
+                    <div class="map-overlay-tag">Mandalay Grid Feed</div>
+                    
+                    <div class="small-temp-box">
+                        <i class="bi bi-thermometer-high"></i> Temp: 41°C
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <div class="card-header-icon">
+                        <i class="bi bi-shield-sun-fill"></i> Mandalay Survival Tips
+                    </div>
+                    <ul class="tips-list">
+                        <li><span>•</span> Peak alert: Keep indoor bamboo blinds down between 11 AM - 4 PM.</li>
+                        <li><span>•</span> Hydration: Drink electrolyte-rich liquids hourly to fight dry heat exhaustion.</li>
+                        <li><span>•</span> Reduction: Apply wet towels to pressure points to lower core temperatures.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</main>
+
+<main class="main-content">
+    <div class="hero-container">
+        <section class="hero-section">
+            
+            <div class="left-side">
+                <div class="top-badge">
+                    <i class="bi bi-geo-alt-fill"></i> Zone 2: Lower Myanmar
+                </div>
+                
+                <h1 class="main-heading">Yangon Interactive Heat &amp; Cooling Map</h1>
+                
+                <p class="hero-description">
+                    Monitoring the coastal humidity and heavy concrete urban layout across Yangon. High architectural density traps localized heat, requiring immediate public cooling intervention.
+                </p>
+
+                <div class="info-data-grid">
+                    <div class="data-box-item hot-zone">
+                        <div class="data-title"><i class="bi bi-moisture"></i> Yangon Humidity &amp; Heat</div>
+                        <p class="data-desc">Downtown townships, Hlaing Tharyar, and South Dekkhina zones are recording high moisture-retaining thermal stress.</p>
+                    </div>
+                    
+                    <div class="data-box-item cool-zone">
+                        <div class="data-title"><i class="bi bi-tree-fill"></i> Yangon Green Safe Zones</div>
+                        <p class="data-desc">Shaded park pavilions, solar-powered public libraries, and community shelters are active across municipal townships.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="image-box hover-container-box">
+                    <img src="image/yangon.png" alt="Yangon Climate Grid" class="map-preview-img">
+                    <div class="map-overlay-tag">Yangon Grid Feed</div>
+                    
+                    <div class="small-temp-box">
+                        <i class="bi bi-thermometer-high"></i> Temp: 37°C
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <div class="card-header-icon">
+                        <i class="bi bi-shield-sun-fill"></i> Yangon Survival Tips
+                    </div>
+                    <ul class="tips-list">
+                        <li><span>•</span> Airflow: Ensure cross-ventilation in concrete buildings to disperse heavy humidity.</li>
+                        <li><span>•</span> Hydration: Drink pure water hourly; avoid high-sugar items that worsen heat stress.</li>
+                        <li><span>•</span> Mitigation: Utilize light-reflective window films to bounce off intense solar rays.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</main>
+
+<main class="main-content">
+    <div class="hero-container">
+        <section class="hero-section">
+            
+            <div class="left-side">
+                <div class="top-badge">
+                    <i class="bi bi-geo-alt-fill"></i> Zone 3: Arid Dry Zone
+                </div>
+                
+                <h1 class="main-heading">Magway Interactive Heat &amp; Cooling Map</h1>
+                
+                <p class="hero-description">
+                    Tracking extreme arid desert-like conditions across the Magway division. Extended exposure alerts are active due to sparse canopy cover and intense seasonal ground-radiation.
+                </p>
+
+                <div class="info-data-grid">
+                    <div class="data-box-item hot-zone">
+                        <div class="data-title"><i class="bi bi-sun-fill"></i> Magway Arid Alerts</div>
+                        <p class="data-desc">Chauk, Pakokku, and Magway district lines are registering maximum critical ground temperatures.</p>
+                    </div>
+                    
+                    <div class="data-box-item cool-zone">
+                        <div class="data-title"><i class="bi bi-house-heart-fill"></i> Magway Thatch Refuges</div>
+                        <p class="data-desc">Traditional high-ceiling thatch community structures and earthen-cooled resting houses serve as safe sanctuaries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="image-box hover-container-box">
+                    <img src="image/magway.png" alt="Magway Climate Grid" class="map-preview-img">
+                    <div class="map-overlay-tag">Magway Grid Feed</div>
+                    
+                    <div class="small-temp-box">
+                        <i class="bi bi-thermometer-high"></i> Temp: 43°C
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <div class="card-header-icon">
+                        <i class="bi bi-shield-sun-fill"></i> Magway Survival Tips
+                    </div>
+                    <ul class="tips-list">
+                        <li><span>•</span> Shelter: Avoid open outdoor terrain entirely between 12 PM and 3:30 PM.</li>
+                        <li><span>•</span> Traditional: Apply Thanakha paste to exposed skin for its natural, localized cooling layer.</li>
+                        <li><span>•</span> Storage: Rely on traditional terracotta clay pots to keep drinking water naturally chilled.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</main>
+
+<div class="page-navigation">
+    <a href="problem.html" class="page-nav-link">
+        <button class="action-btn btn-next" type="button">
+            Next <span>→</span>
+        </button>
+    </a>
+</div>
+<br>
+
+<footer class="footer-wrapper">
+    <div class="footer-main">
+        <div class="footer-column">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="image/logo.png" alt="Prime-Blitz Logo" class="footer-logo-img">
+                </a>
+                <span class="brand-name2">Prime-Blitz</span>
+            </div>
+            <div class="summary-box">
+                <p>PRIME-BLITZ bridges modern efficiency and Myanmar’s traditional architecture, delivering data-driven smart cooling solutions for a sustainable tomorrow.</p>
+            </div>
+        </div>
+
+        <div class="footer-column col-center">
+            <div class="links-section">
+                <h3>Useful Links</h3>
+                <ul class="useful-links-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="building.html">Building</a></li>
+                </ul>
+            </div>
+            <div class="references-section">
+                <h3>References</h3>
+                <a href="references.pdf" class="ref-link" target="_blank">
+                    <button class="ref-btn" style="text-align: center;">Images  <span style="font-size: 1.3rem;"><i class="bi bi-book"></i></span></button>
+                </a>
+                <a href="references.pdf" class="ref-link" target="_blank">
+                    <button class="ref-btn" style="text-align: center;">Information  <span style="font-size: 1.3rem;"><i class="bi bi-image"></i></span></button>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <div class="contact-section">
+                <h3>Contact us</h3>
+                <div class="contact-item">
+                    <span class="contact-icon-box"><i class="bi bi-telephone"></i></span>
+                    <span class="contact-text">95+ (09)911911911</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon-box"><i class="bi bi-geo-alt"></i></span>
+                    <span class="contact-text">67 Aung Myae Street, Yangon, House Nu 67</span>
+                </div>
+            </div>
+            <div class="social-section">
+                <h3>Follow us</h3>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com" target="_blank" class="green-circle-btn"><i class="bi bi-tiktok"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" class="green-circle-btn"><i class="bi bi-facebook"></i></a>
+                    <a href="https://discord.com" target="_blank" class="green-circle-btn"><i class="bi bi-discord"></i></a>
+                    <a href="https://telegram.org" target="_blank" class="green-circle-btn"><i class="bi bi-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>©2026 Prime-Blitz. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

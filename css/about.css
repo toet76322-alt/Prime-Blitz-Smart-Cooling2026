@@ -1,0 +1,151 @@
+/* About US UI */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: rgba(246, 241, 241, 0.968);
+    box-sizing: border-box;
+}
+
+.group-card {
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    padding: 35px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.group-card h1 {
+    margin-bottom: 18px;
+    font-size: 2.3rem;
+    color: #1b4332;
+}
+
+.group-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #475569;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dev-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    width: min(260px, 100%);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #2d6a4f;
+}
+
+.dev-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.14);
+}
+
+.profile-pic {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    object-fit: cover;
+    border: 3px solid #2d6a4f;
+}
+
+.dev-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: #1b4332;
+}
+
+.role {
+    font-weight: bold;
+    color: #2d6a4f;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.dev-card p {
+    font-size: 0.95rem;
+    color: #525252;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.active-link {
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 780px) {
+    .group-card {
+        padding: 25px;
+    }
+
+    .team-grid {
+        gap: 16px;
+    }
+}
+
+/* FAQ styles */
+.faq-section {
+    background-color: white;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    margin: 40px auto;
+    max-width: 1000px;
+}
+.faq-section h2 {
+    margin-bottom: 20px;
+    color: #1b4332;
+}
+.faq-section details {
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    padding: 14px 18px;
+    background: #f8fafc;
+}
+.faq-section summary {
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+    user-select: none;
+}
+
+.faq-section summary::before {
+    content: '\25B6';
+    display: inline-block;
+    margin-right: 10px;
+    transition: transform 0.2s ease;
+}
+.faq-section details[open] summary::before {
+    transform: rotate(90deg);
+}
+.faq-section p {
+    margin: 12px 0 0;
+    line-height: 1.7;
+    color: #475569;
+}
+

@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+main {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1a332a;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        /* The main 3-column layout */
+        .vision-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Columns for the cards */
+        .card-column {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            flex: 1;
+        }
+
+        .info-card {
+            background-color: #f1fcf6;
+            border: 1px solid #d4ecd9;
+            border-radius: 15px;
+            padding: 20px 25px;
+            border-left: 6px solid #a8e6cf;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .info-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-card p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.4;
+            color: #4a6358;
+        }
+
+        /* Center Image Styling */
+        .center-image {
+            flex: 1.4;
+            display: flex;
+            justify-content: center;
+        }
+
+        .center-image img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .title {
+            font-size: 50px;
+            color: #1b4332;
+            text-align: left;
+            font-weight: 700;
+            margin-top: 100px;
+        }
+
+        /* Bottom Content Section */
+        .bottom-content {
+            text-align: center;
+            max-width: 1100px;
+            margin-top: 50px;
+        }
+
+        /* Modern Description Cards */
+        .description {
+            background: linear-gradient(135deg, #f1fcf6, #e4f7eb);
+            border-left: 6px solid #52b788;
+            padding: 25px 30px;
+            margin-bottom: 25px;
+            border-radius: 18px;
+            font-size: 19px;
+            line-height: 1.8;
+            font-weight: 500;
+            color: #355244;
+            text-align: left;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hover Effect */
+        .description:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+        }
+
+        /* Decorative Glow */
+        .description::before {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: rgba(82, 183, 136, 0.15);
+            border-radius: 50%;
+            top: -40px;
+            right: -40px;
+        }
+        .desc-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+            margin-top: 35px;
+            color: #1b4332;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            display: inline-block;
+            margin-top: 25px;
+            background: linear-gradient(135deg, #2d6a4f, #40916c);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 14px;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .quote-box:hover {
+            transform: scale(1.05);
+        }
+
+            .action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 130px;
+    height: 45px;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffffff;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.btn-back {
+    background-color: #70a643;
+}
+
+.btn-next {
+    background-color: #113d43;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid #d1e2e4;
+}
+
+.page-nav-link {
+    text-decoration: none;
+}
+ 
+        /* TABLET RESPONSIVE */          
+        @media (max-width: 992px) {
+
+            body {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 42px;
+                text-align: center;
+            }
+
+            .title {
+                font-size: 40px;
+                text-align: center;
+                margin-top: 70px;
+            }
+
+            .vision-container {
+                flex-direction: column;
+                gap: 35px;
+            }
+
+            .card-column {
+                width: 100%;
+                gap: 25px;
+            }
+
+            .center-image img {
+                max-width: 100%;
+            }
+
+            .desc-title {
+                font-size: 25px;
+            }
+
+            .description {
+                font-size: 17px;
+                padding: 22px;
+            }
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+
+            body {
+                padding: 18px;
+            }
+
+            h1 {
+                font-size: 34px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .title {
+                font-size: 30px;
+                text-align: center;
+                margin-top: 60px;
+                line-height: 1.3;
+            }
+
+            .vision-container {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .card-column {
+                width: 100%;
+                gap: 20px;
+            }
+
+            .info-card {
+                padding: 18px;
+            }
+
+            .info-card h3 {
+                font-size: 20px;
+            }
+
+            .info-card p {
+                font-size: 15px;
+            }
+
+            .center-image img {
+                width: 100%;
+                border-radius: 18px;
+            }
+
+            .bottom-content {
+                margin-top: 30px;
+            }
+
+            .desc-title {
+                font-size: 22px;
+                margin-top: 28px;
+            }
+
+            .description {
+                font-size: 15px;
+                line-height: 1.7;
+                padding: 18px;
+                border-radius: 15px;
+            }
+
+            .quote-box {
+                font-size: 16px;
+                padding: 15px 25px;
+                line-height: 1.5;
+            }
+        }

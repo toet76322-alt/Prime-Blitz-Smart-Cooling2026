@@ -1,0 +1,243 @@
+﻿/* 1. Reset & Global Fix (Crucial for removing the right gap) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Prevents padding from adding to element width */
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Hard fix for horizontal scrolling */
+    background: #f8faf9; /* Light background for the whole page */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Sign In Wrapper */
+.signin-wrapper {
+    width: 100%;
+    min-height: calc(100vh - 140px); /* Adjust based on your Nav + Footer height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px; /* Increased padding for better breathing room */
+}
+
+/* 3. Sign In Card */
+.signin-card {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(32, 56, 40, 0.12);
+    overflow: hidden; /* Clips the inner background colors to the radius */
+}
+
+/* 4. Left Info Section */
+.signin-info {
+    padding: 50px 40px;
+    background: linear-gradient(180deg, #e9f8f2 0%, #f3fff8 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signin-info h1 {
+    font-size: 2.6rem;
+    line-height: 1.1;
+    margin-bottom: 18px;
+    color: #1d3b2d;
+}
+
+.signin-info p {
+    margin-bottom: 30px;
+    color: #466a57;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.info-boxes {
+    display: grid;
+    gap: 25px;
+}
+
+.info-boxes div {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    min-width: 50px; /* Prevents icon from shrinking */
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #2d6a4f;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.info-boxes h3 {
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+    color: #214a36;
+}
+
+.info-boxes p {
+    margin: 0;
+    line-height: 1.5;
+    color: #4d6358;
+    font-size: 0.95rem;
+}
+
+/* 5. Right Form Section */
+.signin-form-card {
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-header h2 {
+    margin-bottom: 8px;
+    color: #1f3d2f;
+    font-size: 2.2rem;
+}
+
+.form-header p {
+    margin-bottom: 30px;
+    color: #556d62;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.signin-form label {
+    font-size: 0.9rem;
+    color: #2d3f33;
+    font-weight: 600;
+    margin-bottom: -12px; /* Pulls label closer to input */
+}
+
+.signin-form input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #d6e3db;
+    font-size: 1rem;
+    background: #fbfffb;
+    color: #23332b;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.signin-form input:focus {
+    border-color: #2d6a4f;
+    box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.1);
+}
+
+.form-footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: -5px;
+}
+
+.remember-label {
+    color: #4b5e52;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.form-footer-row a {
+    color: #2d6a4f;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* 6. Buttons */
+.primary-btn, .secondary-btn {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: #2d6a4f;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #1e4d38;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: #f0f4f2;
+    color: #23332b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.secondary-btn:hover {
+    background: #e2ede7;
+}
+
+.signup-text {
+    margin-top: 10px;
+    color: #5a6b62;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.signup-text a {
+    color: #2d6a4f;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+/* 8. Responsive Design */
+@media (max-width: 900px) {
+    .signin-card {
+        grid-template-columns: 1fr; /* Stack the sections */
+        max-width: 550px;
+    }
+    
+    .signin-info {
+        order: 2; /* Move info section below the form on mobile */
+    }
+}
+
+@media (max-width: 500px) {
+    .signin-wrapper {
+        padding: 20px 15px;
+    }
+    
+    .signin-info, .signin-form-card {
+        padding: 30px 20px;
+    }
+
+    .signin-info h1 {
+        font-size: 2rem;
+    }
+}

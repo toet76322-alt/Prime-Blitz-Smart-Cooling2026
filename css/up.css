@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.success-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh; 
+  background-color: #ffffff; 
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+/* The White Box */
+.success-card {
+  background-color: #e2dbdbd1;
+  width: 100%;
+  max-width: 550px;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05); 
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.success-icon {
+  font-size: 90px;
+  color: #2e7d32; 
+  margin-bottom: 20px;
+}
+
+/* Main Heading */
+.success-card h1 {
+  color: #1b4d22;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Description Text */
+.success-card p {
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+
+/* The Orange Action Button */
+.success-back-btn {
+  display: inline-block;
+  background-color: #239e41; /* Bright orange button */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 16px 30px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover adjustments for the new button class */
+.success-back-btn:hover {
+  background-color: #13de57;
+  transform: translateY(-1px);
+}
+
+.success-back-btn:active {
+  transform: translateY(1px);
+}
+
+/* Tiny bottom text */
+.footer-credit {
+  display: block;
+  margin-top: 25px;
+  font-size: 12px;
+  color: #777777;
+}

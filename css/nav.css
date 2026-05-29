@@ -1,0 +1,294 @@
+/* --- GLOBAL RESET --- */
+
+/* --- MAIN NAVIGATION BAR --- */
+.main-nav {
+    background: linear-gradient(135deg, #134E5E 1%, #71B280 69%);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    border-bottom: 2px solid black;
+}
+
+/* --- LEFT SECTION --- */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10001;
+}
+
+.site-logo {
+    height: 55px;
+    width: 55px;
+    background: black; 
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.site-logo:hover {
+    transform: scale(1.05);
+}
+
+.brand-name {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+}
+
+/* --- NAV CONTAINER (DESKTOP) --- */
+.nav-container {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(0, 255, 51);
+    text-decoration: underline;
+}
+
+.nav-links .home-btn {
+    background: #2ecc71;
+    padding: 8px 18px;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links .home-btn:hover {
+    background: #517e33;
+    transform: translateY(-2px);
+}
+
+/* --- RIGHT SECTION --- */
+.nav-right-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box input {
+    padding: 10px 15px;
+    border: 2px solid rgb(198, 205, 203);
+    border-radius: 14px;
+    width: 200px;
+    transition: width 0.4s ease, border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #0b87e7;
+    /* Smooth transition for the glow effect */
+    transition: all 0.3s ease-in-out; 
+    /* Base subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-icon {
+    width: 50px;
+    height: 50px;
+    background: black; 
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-icon:hover {
+    background: #333;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10001;
+    width: 40px;
+    height: 30px;
+    margin-left: auto;
+}
+
+/* Hamburger Lines Transition */
+.hamburger span, .hamburger span::before, .hamburger span::after {
+    content: '';
+    display: block;
+    background: black;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger span { top: 13px; }
+.hamburger span::before { top: -10px; }
+.hamburger span::after { top: 10px; }
+
+@media (max-width: 950px) {
+    .hamburger { display: block; }
+
+    /* /* X Animation when Menu Open  */
+    #menu-toggle:checked ~ .hamburger span { background: transparent; }
+    #menu-toggle:checked ~ .hamburger span::before { transform: rotate(45deg); top: 0; }
+    #menu-toggle:checked ~ .hamburger span::after { transform: rotate(-45deg); top: 0; }
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Initially hidden */
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg, #134E5E 1%, #71B280 69%);
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        z-index: 10000;
+    }
+
+    #menu-toggle:checked ~ .nav-container {
+        left: 0; /* Sliding transition in */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 0;
+    }
+
+    .nav-links li {
+        width: 80%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-links a { font-size: 1.8rem; }
+
+    .nav-right-items {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .search-box { width: 80%; }
+    .search-box input {
+        width: 100%;
+        height: 55px;
+        text-align: center;
+    }
+}
+
+/* USE THIS SINGLE BLOCK TO REPLACE THE REMAINING USER-ICON CODES */
+.user-icon {
+    width: 55px;
+    height: 55px;
+    background: black; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Centers and sizes the Font Awesome user icon inside the circle */
+.user-icon i {
+    color: white;
+    font-size: 1.3rem;
+}
+
+/* Glow effect when you hover */
+.user-icon:hover {
+    border-color: #00d4ff;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
+    transform: translateY(-3px);
+}
+
+/* Mobile responsive menu alignment */
+@media (max-width: 950px) {
+    .user-icon {
+        width: 60px;
+        height: 60px;
+        margin: 10px auto; /* Centers the icon perfectly in mobile menu */
+    }
+    
+    .user-icon i {
+        font-size: 1.6rem;
+    }
+}
+
+
+.user-icon {
+    position: relative;
+    overflow: hidden;
+}
+
+.user-icon::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    top: 10px;
+}
+
+.user-icon::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 25px;
+    background: white;
+    border-radius: 50% 50% 0 0;
+    bottom: -5px;
+}
+
+.site-logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%; /* Keeps it a circle */
+    border: 2px solid black; 
+    object-fit: cover; /* Important: prevents the image from being squished */
+    background: white; 
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add that light blue glow on hover for the logo too */
+.site-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px 4px rgba(0, 212, 255, 0.5);
+    border-color: #00d4ff;
+}
+
+/* Ensure the link wrapper doesn't add weird spacing */
+.nav-left a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}

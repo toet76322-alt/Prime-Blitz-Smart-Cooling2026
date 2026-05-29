@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+  /* Base Container - Centers the card on your page */
+  .contact-page-container {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Card Layout using Flexbox */
+  .contact-card {
+    max-width: 1000px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row; /* Side-by-side on desktop */
+  }
+
+  /* Left Panel (Info) */
+  .contact-info-panel {
+    background: linear-gradient(135deg, #1db683 0%, #0a9a11e7 100%);
+    padding: 2.5rem;
+    color: #ffffff;
+    width: 40%; /* Takes up 40% width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .info-header h2 {
+    font-size: 1.875rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  .info-header p {
+    color: #e0e7ff;
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  .contact-details-list {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .icon-wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  .detail-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #c7d2fe;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+  }
+
+  .detail-value {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .info-footer {
+    opacity: 0.8;
+    font-family: monospace;
+    font-size: 0.75rem;
+  }
+
+  /* Right Panel (Form) */
+  .contact-form {
+    padding: 3rem;
+    width: 60%; /* Takes up 60% width */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* First Name & Last Name Row */
+  .form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  /* Standard Flex Helper for inputs side-by-side */
+  .flex-1 {
+    flex: 1;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    color: #0f172a;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+
+  .form-group textarea {
+    resize: none;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    background-color: #ffffff;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+  }
+
+  /* Button styling */
+  .submit-btn {
+    width: max-content;
+    padding: 0.75rem 2rem;
+    background-color: #15a507;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: #17e62f;
+    transform: translateY(-1px);
+  }
+
+  /* Responsive Breakpoints (Mobile Layout) */
+  @media (max-width: 768px) {
+    .contact-card {
+      flex-direction: column; /* Stack vertically on tablets/phones */
+    }
+    
+    .contact-info-panel, 
+    .contact-form {
+      width: 100%; /* Take full width when stacked */
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .form-row {
+      flex-direction: column; /* Stack name inputs vertically on small mobile */
+    }
+
+    .submit-btn {
+      width: 100%; /* Full-width button on small mobile */
+    }
+  }
